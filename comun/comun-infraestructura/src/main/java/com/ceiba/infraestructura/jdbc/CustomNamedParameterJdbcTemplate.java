@@ -2,6 +2,7 @@ package com.ceiba.infraestructura.jdbc;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Locale;
 
 import com.ceiba.infraestructura.excepcion.ExcepcionTecnica;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -26,6 +27,22 @@ public class CustomNamedParameterJdbcTemplate {
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		this.namedParameterJdbcTemplate.update(sql, paramSource,keyHolder,new String[] { "id" });
 		return keyHolder.getKey().longValue();
+	}
+
+	public int create(Object object,String sql) {
+		MapSqlParameterSource paramSource = crearParametros(object);
+		KeyHolder keyHolder = new GeneratedKeyHolder();
+		String name = object.getClass().getSimpleName().toLowerCase().substring(3);
+		this.namedParameterJdbcTemplate.update(sql, paramSource,keyHolder,new String[] {name+"_"+"id" });
+		return keyHolder.getKey().intValue();
+	}
+
+	public int createWithoutDto(Object object,String sql) {
+		MapSqlParameterSource paramSource = crearParametros(object);
+		KeyHolder keyHolder = new GeneratedKeyHolder();
+		String name = object.getClass().getSimpleName().toLowerCase();
+		this.namedParameterJdbcTemplate.update(sql, paramSource,keyHolder,new String[] {name+"_"+"id" });
+		return keyHolder.getKey().intValue();
 	}
 	
 	public void actualizar(Object object,String sql) {

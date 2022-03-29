@@ -35,8 +35,10 @@ dependencies {
 
 	implementation project.ext.apachecommons
 	implementation project.ext.springbootjdbc
-	runtimeOnly project.ext.db
+	implementation project.ext.db
 	testImplementation project.ext.flywaytest
+	implementation project.ext.h2
+	implementation project.ext.springbootjdbc
 
 	
 	implementation project(':dominio')
