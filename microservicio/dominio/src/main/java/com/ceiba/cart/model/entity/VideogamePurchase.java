@@ -1,4 +1,4 @@
-package com.ceiba.usuario.modelo.entidad;
+package com.ceiba.cart.model.entity;
 
 import com.ceiba.videogame.model.entity.Videogame;
 
