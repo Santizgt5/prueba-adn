@@ -43,25 +43,16 @@ pipeline {
 				sh './microservicio/gradlew --b ./microservicio/build.gradle test'
 			}
 		}
-/*
+
 		stage('Static Code Analysis') {
 			steps{
-				echo '------------>Análisis de código estático<------------'
-				withSonarQubeEnv('Sonar') {
-					sh "${tool name: 'SonarScanner', type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
-				}
+			    echo '------------>Análisis de código estático<------------'
+				sonarqubeMasQualityGatesP(
+				sonarKey:'co.com.ceiba.adn:videojuegos-santiago.alvarez',
+				sonarName:'"Ceiba-ADN-Videojuegos(santiago.alvarez)"',
+				sonarPathProperties:'./microservicio/sonar-project.properties')
 			}
-		}*/
-
-// 		stage('Static Code Analysis') {
-// 			steps{
-// 			    echo '------------>Análisis de código estático<------------'
-// 				sonarqubeMasQualityGatesP(
-// 				sonarKey:'co.com.ceiba.adn:videojuegos-santiago.alvarez',
-// 				sonarName:'"Ceiba-ADN-Videojuegos(santiago.alvarez)"',
-// 				sonarPathProperties:'./sonar-project.properties')
-// 			}
-// 		}
+		}
 
 
 		stage('Build') {

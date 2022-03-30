@@ -9,10 +9,10 @@ import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 @Repository
 public class DaoVideogameH2 implements DaoVideogame {
@@ -40,11 +40,12 @@ public class DaoVideogameH2 implements DaoVideogame {
             String platform = row.getString("platform");
             Double price = row.getDouble("price");
             Date born = row.getDate("born");
-            LocalDate releaseDate_videogame =
-                    LocalDate.ofInstant(Instant.ofEpochMilli(releaseDate.getTime()),
-                            TimeZone.getDefault().toZoneId());
-            LocalDate born_company = LocalDate.ofInstant(Instant.ofEpochMilli( born.getTime()),
-                    TimeZone.getDefault().toZoneId());
+            LocalDate releaseDate_videogame = Instant.ofEpochMilli(releaseDate.getTime())
+                    .atZone( ZoneId.systemDefault() )
+                    .toLocalDate();
+            LocalDate born_company = Instant.ofEpochMilli(born.getTime())
+                    .atZone( ZoneId.systemDefault() )
+                    .toLocalDate();
             Company company = new Company( row.getInt("company_id"), row.getString("name"),row.getString("description"), born_company, row.getString("nit"));
             Videogame videogame = new Videogame( id, title, stock, company, releaseDate_videogame, platform, price );
             videogames.add(videogame);
