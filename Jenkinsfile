@@ -3,7 +3,7 @@
 pipeline {
 	//Donde se va a ejecutar el Pipeline
 	agent {
-		label 'Slave4_Induccion'
+		label 'Slave_Induccion'
 	}
 
 	//Opciones específicas de Pipeline dentro del Pipeline
@@ -71,7 +71,7 @@ pipeline {
 		}
 		success {
 			echo 'This will run only if successful'
-			junit 'microservicio/infraestructura/build/test-results/test/*.xml' //RUTA RELATIVA DE LOS ARCHIVOS .XML
+			mail (to: 'santiago.alvarez@ceiba.com.co',subject: "Succes Pipeline:${currentBuild.fullDisplayName}",body: "Pipeline was successfuly complete ${env.BUILD_URL}")
 		}
 		failure {
 			echo 'This will run only if failed'
