@@ -1,16 +1,18 @@
-package com.ceiba.cart.model.dto;
+package com.ceiba.cart.command;
 
 import com.ceiba.cart.model.entity.VideogamePurchase;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @Getter
+@Setter
 @AllArgsConstructor
-@Builder
-public class DtoCart {
+@NoArgsConstructor
+public class CommandCart {
 
     private int id;
     private double total;

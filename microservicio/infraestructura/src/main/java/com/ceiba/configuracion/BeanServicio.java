@@ -1,5 +1,7 @@
 package com.ceiba.configuracion;
 
+import com.ceiba.cart.port.repository.CartRepository;
+import com.ceiba.cart.service.CreateCartService;
 import com.ceiba.company.port.repository.CompanyRepository;
 import com.ceiba.company.service.CreateCompanyService;
 import com.ceiba.company.service.UpdateCompanyService;
@@ -48,6 +50,12 @@ public class BeanServicio {
     public UpdateCompanyService updateCompanyService(CompanyRepository companyRepository) {
         return  new UpdateCompanyService(companyRepository);
     }
+
+    @Bean
+    public CreateCartService createCartService(CartRepository cartRepository) {
+        return new CreateCartService(cartRepository);
+    }
+
 	
 
 }

@@ -19,3 +19,18 @@ create table videogame (
     primary key (videogame_id),
     foreign key (companyId) references company(company_id)
  );
+
+ create table cart(
+    cart_id int(11) auto_increment,
+    total float(53) not null,
+    primary key (cart_id)
+ );
+
+ create table purchaseVideogame(
+    videogamepurchase_id int(11) auto_increment,
+    videogame varchar(45) not null,
+    quantity int(11) not null,
+    cartId int(11),
+    foreign key (cartId) references cart(cart_id)
+ );
+

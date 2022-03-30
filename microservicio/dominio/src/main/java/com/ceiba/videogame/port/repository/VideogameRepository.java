@@ -1,7 +1,6 @@
 package com.ceiba.videogame.port.repository;
 
 import com.ceiba.videogame.model.dto.DtoVideogame;
-import com.ceiba.videogame.model.entity.Videogame;
 
 public interface VideogameRepository {
 

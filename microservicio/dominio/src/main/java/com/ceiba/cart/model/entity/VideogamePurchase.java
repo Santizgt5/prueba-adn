@@ -4,10 +4,10 @@ import com.ceiba.videogame.model.entity.Videogame;
 
 public class VideogamePurchase {
 
-    private Videogame videogame;
+    private String videogame;
     private int quantity;
 
-    public VideogamePurchase(Videogame videogame, int quantity) {
+    public VideogamePurchase(String videogame, int quantity) {
         //TODO Add validaciones
 
         this.videogame = videogame;
