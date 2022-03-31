@@ -1,6 +1,5 @@
 package com.ceiba.videogame.adapter.repository;
 
-import com.ceiba.company.model.entity.Company;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.videogame.model.dto.DtoVideogame;

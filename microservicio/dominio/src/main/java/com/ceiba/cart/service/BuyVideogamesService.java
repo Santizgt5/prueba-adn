@@ -1,9 +1,7 @@
 package com.ceiba.cart.service;
 
 import com.ceiba.cart.model.dto.DtoCart;
-import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.dominio.excepcion.WeekendException;
-import com.ceiba.usuario.modelo.entidad.Usuario;
 import com.ceiba.videogame.model.dto.DtoVideogame;
 import com.ceiba.videogame.port.repository.VideogameRepository;
 import com.ceiba.videogamePurchase.model.dto.DtoVideogamePurchase;
@@ -14,7 +12,7 @@ import java.util.List;
 
 public class BuyVideogamesService {
 
-    private static final String IS_WEEKEND = "Today is the weekend, you can't buy";
+    private static final String IS_WEEKEND = "Today is weekend, you can't buy";
 
     private final VideogameRepository videogameRepository;
 
