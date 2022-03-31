@@ -1,6 +1,7 @@
 package com.ceiba.cart.command;
 
-import com.ceiba.cart.model.entity.VideogamePurchase;
+import com.ceiba.videogamePurchase.command.CommandVideogamePurchase;
+import com.ceiba.videogamePurchase.model.dto.DtoVideogamePurchase;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +17,8 @@ public class CommandCart {
 
     private int id;
     private double total;
-    private List<Integer> videogames;
+    private  int cantidadTotal;
+    private List<CommandVideogamePurchase> videogames;
 
 
 }

@@ -1,20 +1,23 @@
 package com.ceiba.cart.model.dto;
 
-import com.ceiba.cart.model.entity.VideogamePurchase;
+import com.ceiba.videogamePurchase.model.dto.DtoVideogamePurchase;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Getter
+@Setter
 @AllArgsConstructor
 @Builder
 public class DtoCart {
 
     private int id;
     private double total;
-    private List<Integer> videogames;
+    private int cantidadTotal;
+    private List<DtoVideogamePurchase> videogames;
 
 
 }

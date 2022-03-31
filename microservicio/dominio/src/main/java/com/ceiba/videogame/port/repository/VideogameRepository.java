@@ -1,6 +1,7 @@
 package com.ceiba.videogame.port.repository;
 
 import com.ceiba.videogame.model.dto.DtoVideogame;
+import com.ceiba.videogame.port.entity.Videogame;
 
 public interface VideogameRepository {
 
@@ -19,16 +20,10 @@ public interface VideogameRepository {
 
 
     /**
-     * Permite validar si existe un usuario con un nombre
-     * @param nombre
-     * @return si existe o no
+     * Return videogame by id
+     * @param id
+     * @return Videogame
      */
-    boolean existe(String nombre);
-
-    /**
-     * Permite validar si existe un usuario con un nombre excluyendo un id
-     * @return si existe o no
-     */
-    boolean existePorId(int id);
+    DtoVideogame getVideogameById(int id);
 
 }

@@ -30,6 +30,4 @@ public class ComandVideogameController {
         updateVideogameHandler.ejecutar(commandVideogame);
     }
 
-
-
 }

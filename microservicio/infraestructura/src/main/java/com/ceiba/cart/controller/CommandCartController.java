@@ -1,26 +1,34 @@
 package com.ceiba.cart.controller;
 
-import com.ceiba.ComandoRespuesta;
 import com.ceiba.cart.command.CommandCart;
-import com.ceiba.cart.command.handler.CreateCartHandler;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.ceiba.cart.command.handler.BuyVideogameHandler;
+import com.ceiba.cart.command.handler.DiscountMondayCartHandler;
+import com.ceiba.cart.model.dto.DtoCart;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/cart")
 public class CommandCartController {
 
-    private final CreateCartHandler createCartHandler;
+    private final DiscountMondayCartHandler createCartHandler;
+    private final BuyVideogameHandler buyVideogameHandler;
 
 
-    public CommandCartController(CreateCartHandler createCartHandler) {
+    public CommandCartController(DiscountMondayCartHandler createCartHandler, BuyVideogameHandler buyVideogameHandler) {
         this.createCartHandler = createCartHandler;
+        this.buyVideogameHandler = buyVideogameHandler;
     }
 
-    @PostMapping
-    public ComandoRespuesta<Integer> crear(@RequestBody CommandCart commandCart) {
+    @GetMapping
+    public DtoCart calculateDiscountMonday(@RequestBody CommandCart commandCart) {
         return createCartHandler.ejecutar(commandCart);
     }
+
+    @PostMapping(value = "/buy")
+    public void buyVideogames(@RequestBody CommandCart commandCart) {
+        buyVideogameHandler.ejecutar(commandCart);
+    }
+
+
+
 }

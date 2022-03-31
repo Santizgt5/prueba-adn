@@ -1,6 +1,6 @@
 package com.ceiba.cart.port.repository;
 
-import com.ceiba.cart.model.dto.DtoCart;
+import com.ceiba.cart.model.entity.Cart;
 
 public interface CartRepository {
 
@@ -9,7 +9,7 @@ public interface CartRepository {
      * @param cart
      * @return el id generado
      */
-    int crear(DtoCart cart);
+    int crear(Cart cart);
 
 
 }

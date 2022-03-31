@@ -1,0 +1,1 @@
+select * from videogame where videogame_id = :id

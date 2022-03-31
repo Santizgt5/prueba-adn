@@ -2,7 +2,8 @@ package com.ceiba.videogame.adapter.dao;
 
 import com.ceiba.company.model.entity.Company;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
-import com.ceiba.videogame.model.entity.Videogame;
+import com.ceiba.videogame.model.dto.DtoVideogame;
+import com.ceiba.videogame.port.entity.Videogame;
 import com.ceiba.videogame.port.dao.DaoVideogame;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -28,10 +29,9 @@ public class DaoVideogameH2 implements DaoVideogame {
     }
 
     @Override
-    public List<Videogame> listar() {
-        List<Videogame> videogames = new ArrayList<>();
+    public List<DtoVideogame> listar() {
+        List<DtoVideogame> videogames = new ArrayList<>();
         this.namedParameterJdbcTemplate.getJdbcTemplate().query(sqlList, row -> {
-
             Integer id = row.getInt("videogame_id");
             String title = row.getString("title");
             Integer stock = row.getInt("stock");
@@ -47,7 +47,7 @@ public class DaoVideogameH2 implements DaoVideogame {
                     .atZone( ZoneId.systemDefault() )
                     .toLocalDate();
             Company company = new Company( row.getInt("company_id"), row.getString("name"),row.getString("description"), born_company, row.getString("nit"));
-            Videogame videogame = new Videogame( id, title, stock, company, releaseDate_videogame, platform, price );
+            DtoVideogame videogame = DtoVideogame.builder().id(id).title(title).stock(stock).company(company).companyId(companyId).platform(platform).price(price).releaseDate(releaseDate_videogame).build();
             videogames.add(videogame);
         });
 
