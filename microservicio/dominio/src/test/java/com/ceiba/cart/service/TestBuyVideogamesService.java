@@ -1,11 +1,9 @@
 package com.ceiba.cart.service;
 
 import com.ceiba.cart.model.dto.DtoCart;
-import com.ceiba.videogame.model.dto.DtoVideogame;
-import com.ceiba.videogame.model.entity.Videogame;
+import com.ceiba.videogame.model.dto.DtoVideogame;;
 import com.ceiba.videogame.port.repository.VideogameRepository;
 import com.ceiba.videogamePurchase.model.dto.DtoVideogamePurchase;
-import com.ceiba.videogamePurchase.model.entity.VideogamePurchase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

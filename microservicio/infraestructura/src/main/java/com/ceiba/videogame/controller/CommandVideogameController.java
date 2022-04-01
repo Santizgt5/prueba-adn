@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/videogame")
-public class ComandVideogameController {
+public class CommandVideogameController {
 
     private final CreateVideogameHandler createVideogameHandler;
     private final UpdateVideogameHandler updateVideogameHandler;
 
 
-    public ComandVideogameController(CreateVideogameHandler createVideogameHandler, UpdateVideogameHandler updateVideogameHandler) {
+    public CommandVideogameController(CreateVideogameHandler createVideogameHandler, UpdateVideogameHandler updateVideogameHandler) {
         this.createVideogameHandler = createVideogameHandler;
         this.updateVideogameHandler = updateVideogameHandler;
     }
