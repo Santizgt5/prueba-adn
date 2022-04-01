@@ -27,8 +27,6 @@ public class Videogame {
     private LocalDate releaseDate;
     private String platform;
     private double price;
-    private double priceWithDiscountMonth;
-    private double priceWithDiscountQuantity;
 
     public Videogame(int id, String title, int stock, Company company, LocalDate releaseDate, String platform, double price) {
         validarObligatorio(title, TITLE_MUST_BE_ENTERED);
@@ -46,7 +44,5 @@ public class Videogame {
         this.releaseDate = releaseDate;
         this.platform = platform;
         this.price = price;
-        this.priceWithDiscountMonth = 0;
-        this.priceWithDiscountQuantity = 0;
     }
 }
