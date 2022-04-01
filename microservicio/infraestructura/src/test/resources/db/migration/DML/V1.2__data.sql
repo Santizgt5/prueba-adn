@@ -1,0 +1,1 @@
+insert into company(company_id, name, description, born, nit) values(1,'test','testD',now(), '12345')

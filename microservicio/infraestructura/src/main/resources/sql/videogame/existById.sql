@@ -1,1 +1,1 @@
-select count(1) from videogame where id = :id
+select count(1) from videogame where videogame_id = :id

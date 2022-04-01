@@ -20,7 +20,7 @@ public class CommandCompany {
     private String name;
     private String description;
     @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern =  "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern =  "yyyy-MM-dd")
     private LocalDate born;
     private String nit;
 

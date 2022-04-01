@@ -1,1 +1,1 @@
-select count(1) from company where id = :id
+select count(1) from company where company_id = :id
