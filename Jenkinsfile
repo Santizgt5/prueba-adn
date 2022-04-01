@@ -54,15 +54,6 @@ pipeline {
 			}
 		}
 
-
-		stage('Build') {
-			steps {
-				echo "------------>Build<------------"
-				//Construir sin tarea test que se ejecutó previamente
-				sh './microservicio/gradlew --b ./microservicio/build.gradle build -x test'
-
-			}
-		}
 	}
 
 	post {

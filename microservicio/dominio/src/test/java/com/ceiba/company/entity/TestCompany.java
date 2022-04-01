@@ -2,7 +2,7 @@ package com.ceiba.company.entity;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.company.model.entity.Company;
-import com.ceiba.company.servicio.testdatabuilder.CompanyTestDataBuilder;
+import com.ceiba.company.service.testdatabuilder.CompanyTestDataBuilder;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -30,7 +30,7 @@ public class TestCompany {
     }
 
     @Test
-    void shoulFailWithoutName() {
+    void shouldFailWithoutName() {
 
         CompanyTestDataBuilder companyTestDataBuilder = new CompanyTestDataBuilder().withName(null).withId(1);
 
@@ -41,7 +41,7 @@ public class TestCompany {
     }
 
     @Test
-    void shoulFailWithoutDescription() {
+    void shouldFailWithoutDescription() {
 
         CompanyTestDataBuilder companyTestDataBuilder = new CompanyTestDataBuilder().withDescription(null).withId(1);
 
@@ -52,7 +52,7 @@ public class TestCompany {
     }
 
     @Test
-    void shoulFailWithoutBorn() {
+    void shouldFailWithoutBorn() {
 
         CompanyTestDataBuilder companyTestDataBuilder = new CompanyTestDataBuilder().withBorn(null).withId(1);
 
@@ -63,7 +63,7 @@ public class TestCompany {
     }
 
     @Test
-    void shoulFailWithoutNit() {
+    void shouldFailWithoutNit() {
 
         CompanyTestDataBuilder companyTestDataBuilder = new CompanyTestDataBuilder().withNit(null).withId(1);
 

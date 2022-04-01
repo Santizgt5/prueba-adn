@@ -28,6 +28,9 @@ public class VideogameRepositoryH2 implements VideogameRepository {
     @SqlStatement(namespace="videogame", value="getById")
     private static String sqlGet;
 
+    @SqlStatement(namespace="videogame", value="existById")
+    private static String sqlExistById;
+
     public VideogameRepositoryH2(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate1, NamedParameterJdbcTemplate namedParameterJdbcTemplate1) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate1;
 
@@ -63,6 +66,14 @@ public class VideogameRepositoryH2 implements VideogameRepository {
                     .toLocalDate();
             return DtoVideogame.builder().id(id).title(title).stock(stock).companyId(companyId).platform(platform).price(price).releaseDate(releaseDate_videogame).build();
         });
+    }
+
+    @Override
+    public boolean existById(int id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistById,paramSource, Boolean.class);
     }
 
 

@@ -1,8 +1,8 @@
 package com.ceiba.videogame.service;
 
 import com.ceiba.videogame.model.dto.DtoVideogame;
+import com.ceiba.videogame.model.entity.Videogame;
 import com.ceiba.videogame.port.dao.DaoVideogame;
-import com.ceiba.videogame.port.entity.Videogame;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

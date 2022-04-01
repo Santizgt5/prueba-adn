@@ -4,6 +4,7 @@ import com.ceiba.company.model.entity.Company;
 import com.ceiba.company.port.repository.CompanyRepository;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -21,6 +22,8 @@ public class CompanyRepositoryH2 implements CompanyRepository {
     @SqlStatement(namespace="company", value="update")
     private static String sqlUpdate;
 
+    @SqlStatement(namespace="company", value="existById")
+    private static String sqlExistById;
 
     @Override
     public int crear(Company company) {
@@ -33,12 +36,11 @@ public class CompanyRepositoryH2 implements CompanyRepository {
     }
 
     @Override
-    public boolean existe(String nombre) {
-        return false;
+    public boolean existById(int id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistById,paramSource, Boolean.class);
     }
 
-    @Override
-    public boolean existePorId(int id) {
-        return false;
-    }
 }

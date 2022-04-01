@@ -3,7 +3,6 @@ package com.ceiba.videogame.adapter.dao;
 import com.ceiba.company.model.entity.Company;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.videogame.model.dto.DtoVideogame;
-import com.ceiba.videogame.port.entity.Videogame;
 import com.ceiba.videogame.port.dao.DaoVideogame;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;

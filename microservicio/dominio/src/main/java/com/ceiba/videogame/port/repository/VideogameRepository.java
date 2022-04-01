@@ -1,7 +1,6 @@
 package com.ceiba.videogame.port.repository;
 
 import com.ceiba.videogame.model.dto.DtoVideogame;
-import com.ceiba.videogame.port.entity.Videogame;
 
 public interface VideogameRepository {
 
@@ -25,5 +24,11 @@ public interface VideogameRepository {
      * @return Videogame
      */
     DtoVideogame getVideogameById(int id);
+
+    /**
+     * Permite validar si existe un videgame con el id
+     * @return si existe o no
+     */
+    boolean existById(int id);
 
 }

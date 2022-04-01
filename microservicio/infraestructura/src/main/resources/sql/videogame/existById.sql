@@ -1,0 +1,1 @@
+select count(1) from videogame where id = :id
