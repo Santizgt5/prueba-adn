@@ -11,10 +11,7 @@ public class CalcuateQuantityDiscountService {
 
 
     public DtoCart ejecutar(DtoCart cart) {
-        double costoTotal = 0;
-        LocalDate dateNow = LocalDate.now();
         Calendar today = Calendar.getInstance();
-        today.set(dateNow.getYear(), dateNow.getMonthValue(), dateNow.getDayOfMonth());
         int day = today.get(Calendar.DAY_OF_WEEK);
         if (day==2) {
             if(cart.getCantidadTotal() >= 2) {

@@ -31,9 +31,7 @@ public class BuyVideogamesService {
     }
 
     private void validarWekeend() {
-        LocalDate dateNow = LocalDate.now();
         Calendar today = Calendar.getInstance();
-        today.set(dateNow.getYear(), dateNow.getMonthValue(), dateNow.getDayOfMonth());
         int day = today.get(Calendar.DAY_OF_WEEK);
         if(day == Calendar.SATURDAY || day == Calendar.SUNDAY) {
             throw new WeekendException(IS_WEEKEND);
