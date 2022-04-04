@@ -51,4 +51,9 @@ public class BeanServicio {
         return new BuyVideogamesService(videogameRepository, cartValidations);
     }
 
+    @Bean
+    public CartValidations cartValidations() {
+        return new CartValidations();
+    }
+
 }
