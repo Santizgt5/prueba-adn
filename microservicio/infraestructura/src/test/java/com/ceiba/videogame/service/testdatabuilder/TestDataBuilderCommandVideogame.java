@@ -3,8 +3,10 @@ package com.ceiba.videogame.service.testdatabuilder;
 
 
 import com.ceiba.videogame.command.CommandVideogame;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.UUID;
 
 
@@ -21,10 +23,10 @@ public class TestDataBuilderCommandVideogame {
     private double price;
 
     public TestDataBuilderCommandVideogame() {
-        title = UUID.randomUUID().toString();
+        title = "God of war";
         stock = 10;
         companyId = 1;
-        releaseDate = LocalDate.now();
+        releaseDate = LocalDate.of(2019, Month.JANUARY, 8);
         platform = "PC";
         price = 150000;
     }

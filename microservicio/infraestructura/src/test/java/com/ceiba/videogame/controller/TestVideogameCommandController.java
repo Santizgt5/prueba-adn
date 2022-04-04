@@ -1,8 +1,6 @@
 package com.ceiba.videogame.controller;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.company.command.CommandCompany;
-import com.ceiba.company.service.testdatabuilder.TestDataBuilderCommandCompany;
 import com.ceiba.videogame.command.CommandVideogame;
 import com.ceiba.videogame.service.testdatabuilder.TestDataBuilderCommandVideogame;
 import com.fasterxml.jackson.databind.ObjectMapper;

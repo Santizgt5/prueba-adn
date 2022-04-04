@@ -18,10 +18,10 @@ public class VerifyDiscountService {
     }
 
     public List<DtoVideogame> ejecutar() {
-        return calculateDiscountMonday(this.daoVideogame.listar());
+        return calculateDiscountOneMonth(this.daoVideogame.listar());
     }
 
-    public List<DtoVideogame> calculateDiscountMonday(List<DtoVideogame> videogames) {
+    public List<DtoVideogame> calculateDiscountOneMonth(List<DtoVideogame> videogames) {
        LocalDate currentDate = LocalDate.now();
        videogames.forEach(videogame -> {
            if(ChronoUnit.DAYS.between(videogame.getReleaseDate(), currentDate) <= 31 ) {

@@ -35,6 +35,17 @@ public class TestCalculateQuantityDiscountService {
     }
 
     @Test
+    @DisplayName("It should calcualte new price with one game")
+    void shouldCalculateNewPriceWithOneGame() {
+        DtoCart dtoCart = DtoCart.builder().cantidadTotal(1).total(150000).build();
+        Mockito.when(cartValidations.mondayValidation()).thenReturn(true);
+        calcuateQuantityDiscountService.ejecutar(dtoCart);
+
+        assertEquals(150000, dtoCart.getTotal());
+
+    }
+
+    @Test
     @DisplayName("It should calcualte new price with discount")
     void shouldCalculateNewPriceWithDiscount() {
         DtoCart dtoCart = DtoCart.builder().cantidadTotal(2).total(300000).build();
