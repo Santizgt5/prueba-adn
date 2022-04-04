@@ -37,8 +37,8 @@ public class BeanServicio {
     }
 
     @Bean
-    public CalcuateQuantityDiscountService createCartService() {
-        return new CalcuateQuantityDiscountService();
+    public CalcuateQuantityDiscountService createCartService(CartValidations cartValidations) {
+        return new CalcuateQuantityDiscountService(cartValidations);
     }
 
     @Bean

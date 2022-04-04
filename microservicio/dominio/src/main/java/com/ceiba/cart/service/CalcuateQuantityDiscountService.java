@@ -1,19 +1,22 @@
 package com.ceiba.cart.service;
 
+import com.ceiba.cart.CartValidations;
 import com.ceiba.cart.model.dto.DtoCart;
 import com.ceiba.cart.model.entity.Cart;
 
-import java.time.LocalDate;
 import java.util.Calendar;
 
 
 public class CalcuateQuantityDiscountService {
 
+    private final CartValidations cartValidations;
+
+    public CalcuateQuantityDiscountService(CartValidations cartValidations) {
+        this.cartValidations = cartValidations;
+    }
 
     public DtoCart ejecutar(DtoCart cart) {
-        Calendar today = Calendar.getInstance();
-        int day = today.get(Calendar.DAY_OF_WEEK);
-        if (day==2) {
+        if (cartValidations.mondayValidation()) {
             if(cart.getCantidadTotal() >= 2) {
                 double totalWithDiscount = cart.getTotal() - (cart.getTotal() * Cart.DISCOUNT_MONDAY);
                 cart.setTotal(totalWithDiscount);

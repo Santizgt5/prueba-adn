@@ -16,4 +16,15 @@ public class CartValidations {
             return false;
         }
     }
+
+    public boolean mondayValidation() {
+        Calendar today = Calendar.getInstance();
+        int day = today.get(Calendar.DAY_OF_WEEK);
+        if(day == Calendar.MONDAY) {
+            return  true;
+        } else {
+            return false;
+        }
+    }
+
 }
