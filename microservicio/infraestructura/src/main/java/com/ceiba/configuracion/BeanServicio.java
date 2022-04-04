@@ -1,5 +1,6 @@
 package com.ceiba.configuracion;
 
+import com.ceiba.cart.CartValidations;
 import com.ceiba.cart.service.BuyVideogamesService;
 import com.ceiba.cart.service.CalcuateQuantityDiscountService;
 import com.ceiba.company.port.repository.CompanyRepository;
@@ -46,8 +47,8 @@ public class BeanServicio {
     }
 
     @Bean
-    public BuyVideogamesService buyVideogamesService(VideogameRepository videogameRepository) {
-        return new BuyVideogamesService(videogameRepository);
+    public BuyVideogamesService buyVideogamesService(VideogameRepository videogameRepository, CartValidations cartValidations) {
+        return new BuyVideogamesService(videogameRepository, cartValidations);
     }
 
 }
