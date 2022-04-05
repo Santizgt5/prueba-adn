@@ -1,7 +1,7 @@
 package com.ceiba.cart.service.testdatabuilder;
 
 import com.ceiba.cart.command.CommandCart;
-import com.ceiba.videogamePurchase.command.CommandVideogamePurchase;
+import com.ceiba.videogamepurchase.command.CommandVideogamePurchase;
 
 import java.util.List;
 

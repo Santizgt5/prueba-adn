@@ -1,10 +1,9 @@
-package com.ceiba.videogamePurchase.entity;
+package com.ceiba.videogamepurchase.entity;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
-import com.ceiba.videogame.service.testdatabuilder.VideogameTestDataBuilder;
-import com.ceiba.videogamePurchase.model.entity.VideogamePurchase;
-import com.ceiba.videogamePurchase.service.testdatabuilder.VideogamePurchaseTestDataBuilder;
+import com.ceiba.videogamepurchase.model.entity.VideogamePurchase;
+import com.ceiba.videogamepurchase.service.testdatabuilder.VideogamePurchaseTestDataBuilder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

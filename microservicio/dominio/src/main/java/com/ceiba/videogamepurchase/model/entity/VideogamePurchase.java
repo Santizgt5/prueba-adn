@@ -1,6 +1,5 @@
-package com.ceiba.videogamePurchase.model.entity;
+package com.ceiba.videogamepurchase.model.entity;
 
-import com.ceiba.cart.model.entity.Cart;
 import lombok.Getter;
 
 import static com.ceiba.dominio.ValidadorArgumento.*;

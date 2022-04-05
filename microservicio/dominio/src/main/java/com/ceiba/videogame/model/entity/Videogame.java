@@ -10,7 +10,7 @@ import static com.ceiba.dominio.ValidadorArgumento.*;
 @Getter
 public class Videogame {
 
-    public final static double DISCOUNT_MONTH = 0.10;
+    public static final double DISCOUNT_MONTH = 0.10;
 
     private static final String TITLE_MUST_BE_ENTERED = "Title must entered";
     private static final String STOCK_MUST_BE_ENTERED = "Stock must entered";

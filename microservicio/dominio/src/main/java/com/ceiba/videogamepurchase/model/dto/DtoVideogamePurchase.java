@@ -1,20 +1,23 @@
-package com.ceiba.videogamePurchase.command;
+package com.ceiba.videogamepurchase.model.dto;
+
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
-public class CommandVideogamePurchase {
+@Builder
+public class DtoVideogamePurchase {
 
     private int id;
     private String videogame;
     private int videogameId;
     private int quantity;
     private double price;
+    private double priceWithDiscount;
+
 
 }

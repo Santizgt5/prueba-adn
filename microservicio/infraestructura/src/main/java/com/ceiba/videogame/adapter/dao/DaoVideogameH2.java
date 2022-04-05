@@ -39,14 +39,14 @@ public class DaoVideogameH2 implements DaoVideogame {
             String platform = row.getString("platform");
             Double price = row.getDouble("price");
             Date born = row.getDate("born");
-            LocalDate releaseDate_videogame = Instant.ofEpochMilli(releaseDate.getTime())
+            LocalDate releaseDateVideogame = Instant.ofEpochMilli(releaseDate.getTime())
                     .atZone( ZoneId.systemDefault() )
                     .toLocalDate();
-            LocalDate born_company = Instant.ofEpochMilli(born.getTime())
+            LocalDate bornCompany = Instant.ofEpochMilli(born.getTime())
                     .atZone( ZoneId.systemDefault() )
                     .toLocalDate();
-            Company company = new Company( row.getInt("company_id"), row.getString("name"),row.getString("description"), born_company, row.getString("nit"));
-            DtoVideogame videogame = DtoVideogame.builder().id(id).title(title).stock(stock).company(company).companyId(companyId).platform(platform).price(price).releaseDate(releaseDate_videogame).build();
+            Company company = new Company( row.getInt("company_id"), row.getString("name"),row.getString("description"), bornCompany, row.getString("nit"));
+            DtoVideogame videogame = DtoVideogame.builder().id(id).title(title).stock(stock).company(company).companyId(companyId).platform(platform).price(price).releaseDate(releaseDateVideogame).build();
             videogames.add(videogame);
         });
 

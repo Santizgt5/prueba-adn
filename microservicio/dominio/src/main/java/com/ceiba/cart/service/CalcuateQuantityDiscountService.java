@@ -16,11 +16,9 @@ public class CalcuateQuantityDiscountService {
     }
 
     public DtoCart ejecutar(DtoCart cart) {
-        if (cartValidations.mondayValidation()) {
-            if(cart.getCantidadTotal() >= 2) {
-                double totalWithDiscount = cart.getTotal() - (cart.getTotal() * Cart.DISCOUNT_MONDAY);
-                cart.setTotal(totalWithDiscount);
-            }
+        if (cartValidations.mondayValidation() && cart.getCantidadTotal() >= 2) {
+            double totalWithDiscount = cart.getTotal() - (cart.getTotal() * Cart.DISCOUNT_MONDAY);
+            cart.setTotal(totalWithDiscount);
         }
         return cart;
     }

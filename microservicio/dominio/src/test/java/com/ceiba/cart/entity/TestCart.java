@@ -4,7 +4,7 @@ import com.ceiba.BasePrueba;
 import com.ceiba.cart.model.entity.Cart;
 import com.ceiba.cart.service.testdatabuilder.CartTestDataBuilder;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
-import com.ceiba.videogamePurchase.model.entity.VideogamePurchase;
+import com.ceiba.videogamepurchase.model.entity.VideogamePurchase;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

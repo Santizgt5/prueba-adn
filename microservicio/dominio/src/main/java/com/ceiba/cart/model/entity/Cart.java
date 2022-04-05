@@ -1,6 +1,6 @@
 package com.ceiba.cart.model.entity;
 
-import com.ceiba.videogamePurchase.model.entity.VideogamePurchase;
+import com.ceiba.videogamepurchase.model.entity.VideogamePurchase;
 import lombok.Getter;
 
 import java.util.List;
@@ -10,7 +10,7 @@ import static com.ceiba.dominio.ValidadorArgumento.*;
 @Getter
 public class Cart {
 
-    public final static double DISCOUNT_MONDAY = 0.20;
+    public  static final  double DISCOUNT_MONDAY = 0.20;
     private static final String TOTAL_MUST_BE_ENTERED = "Total must entered";
     private static final String TOTAL_QUANTITY_MUST_BE_ENTERED = "Total quantity must entered";
     private static final String VIDEOGAMES_MUST_BE_ENTERED = "Videogames must entered";

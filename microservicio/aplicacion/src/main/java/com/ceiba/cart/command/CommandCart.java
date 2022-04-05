@@ -1,7 +1,6 @@
 package com.ceiba.cart.command;
 
-import com.ceiba.videogamePurchase.command.CommandVideogamePurchase;
-import com.ceiba.videogamePurchase.model.dto.DtoVideogamePurchase;
+import com.ceiba.videogamepurchase.command.CommandVideogamePurchase;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

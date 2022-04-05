@@ -61,10 +61,10 @@ public class VideogameRepositoryH2 implements VideogameRepository {
             Date releaseDate = row.getDate("releaseDate");
             String platform = row.getString("platform");
             Double price = row.getDouble("price");
-            LocalDate releaseDate_videogame = Instant.ofEpochMilli(releaseDate.getTime())
+            LocalDate releaseDateVideogame = Instant.ofEpochMilli(releaseDate.getTime())
                     .atZone( ZoneId.systemDefault() )
                     .toLocalDate();
-            return DtoVideogame.builder().id(id).title(title).stock(stock).companyId(companyId).platform(platform).price(price).releaseDate(releaseDate_videogame).build();
+            return DtoVideogame.builder().id(id).title(title).stock(stock).companyId(companyId).platform(platform).price(price).releaseDate(releaseDateVideogame).build();
         });
     }
 

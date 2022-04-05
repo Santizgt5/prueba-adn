@@ -1,9 +1,6 @@
-package com.ceiba.videogamePurchase.service.testdatabuilder;
+package com.ceiba.videogamepurchase.service.testdatabuilder;
 
-import com.ceiba.videogame.service.testdatabuilder.VideogameTestDataBuilder;
-import com.ceiba.videogamePurchase.model.entity.VideogamePurchase;
-
-import java.time.LocalDate;
+import com.ceiba.videogamepurchase.model.entity.VideogamePurchase;
 
 public class VideogamePurchaseTestDataBuilder {
 

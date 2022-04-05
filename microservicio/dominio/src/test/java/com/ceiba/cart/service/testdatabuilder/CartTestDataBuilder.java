@@ -1,8 +1,7 @@
 package com.ceiba.cart.service.testdatabuilder;
 
 import com.ceiba.cart.model.entity.Cart;
-import com.ceiba.videogame.service.testdatabuilder.VideogameTestDataBuilder;
-import com.ceiba.videogamePurchase.model.entity.VideogamePurchase;
+import com.ceiba.videogamepurchase.model.entity.VideogamePurchase;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,7 +6,7 @@ import com.ceiba.cart.command.CommandCart;
 import com.ceiba.cart.service.testdatabuilder.TestDataBuilderCommandCart;
 import com.ceiba.videogame.command.CommandVideogame;
 import com.ceiba.videogame.service.testdatabuilder.TestDataBuilderCommandVideogame;
-import com.ceiba.videogamePurchase.command.CommandVideogamePurchase;
+import com.ceiba.videogamepurchase.command.CommandVideogamePurchase;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

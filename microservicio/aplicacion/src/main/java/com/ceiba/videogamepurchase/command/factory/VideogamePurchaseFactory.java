@@ -1,7 +1,7 @@
-package com.ceiba.videogamePurchase.command.factory;
+package com.ceiba.videogamepurchase.command.factory;
 
-import com.ceiba.videogamePurchase.command.CommandVideogamePurchase;
-import com.ceiba.videogamePurchase.model.dto.DtoVideogamePurchase;
+import com.ceiba.videogamepurchase.command.CommandVideogamePurchase;
+import com.ceiba.videogamepurchase.model.dto.DtoVideogamePurchase;
 
 public class VideogamePurchaseFactory {
 
