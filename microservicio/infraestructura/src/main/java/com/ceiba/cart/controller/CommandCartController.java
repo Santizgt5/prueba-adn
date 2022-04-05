@@ -19,7 +19,7 @@ public class CommandCartController {
         this.buyVideogameHandler = buyVideogameHandler;
     }
 
-    @GetMapping
+    @PostMapping(value = "/calculateDiscount")
     public DtoCart calculateDiscountMonday(@RequestBody CommandCart commandCart) {
         return createCartHandler.ejecutar(commandCart);
     }

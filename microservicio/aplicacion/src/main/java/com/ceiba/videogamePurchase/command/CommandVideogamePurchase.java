@@ -16,6 +16,5 @@ public class CommandVideogamePurchase {
     private int videogameId;
     private int quantity;
     private double price;
-    private double priceWithDiscount;
 
 }
